@@ -1,47 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrichly</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      max-width: 500px;
-    }
-    .btn {
-      background: #2563eb;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    .btn:hover {
-      background: #1d4ed8;
-    }
-  </style>
-</head>
-<body>
-  <h1>Enrichly</h1>
-  <p>Streamlined lead enrichment and outreach support for search funds and M&A teams.</p>
-  <a href="mailto:oliver@enrichly.co" class="btn">Get in Touch</a>
-</body>
-</html>
+// pages/index.js
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-6">
+      {/* Logo */}
+      <div className="mb-8">
+        <Image
+          src="/enrichly-logo.png"
+          alt="Enrichly Logo"
+          width={160}
+          height={160}
+          priority
+        />
+      </div>
+
+      {/* Headline */}
+      <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
+        Data Enrichment for Search Funds & M&A Teams
+      </h1>
+
+      {/* Subheadline */}
+      <p className="text-lg text-gray-600 text-center max-w-xl mb-8">
+        Enrichly helps you build high-quality deal flow lists with validated
+        emails, clean company data, and outreach-ready insights.
+      </p>
+
+      {/* CTA */}
+      <a
+        href="mailto:oliver@enrichly.co"
+        className="px-6 py-3 bg-black text-white rounded-xl shadow-lg hover:bg-gray-800 transition"
+      >
+        Book a Call
+      </a>
+    </main>
+  );
+}
